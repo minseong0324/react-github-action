@@ -23,7 +23,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
+    - run: npm i
     - run: |
         if [ -f "package.json" ] && [ "$(jq -r '.scripts.build' package.json)" != "null" ]; then
           npm run build
