@@ -20,6 +20,18 @@ test("plus button has correct text", () => {
   expect(buttonElement).toHaveTextContent("+");
 });
 
+test("square button has correct text", () => {
+  render(<App />);
+  const buttonElement = screen.getByTestId("square-button");
+  expect(buttonElement).toHaveTextContent("^2");
+});
+
+test("reset button has correct text", () => {
+  render(<App />);
+  const buttonElement = screen.getByTestId("reset-button");
+  expect(buttonElement).toHaveTextContent("reset");
+});
+
 test("When the + button is pressed, the counter changes to 1", () => {
   render(<App />); // App 컴포넌트를 렌더링합니다.
   const buttonElement = screen.getByTestId("plus-button");

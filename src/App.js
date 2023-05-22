@@ -28,6 +28,22 @@ function App() {
         >
           +
         </button>
+        <button
+          data-testid='square-button'
+          onClick={() => setCount((prev) => prev ** 2)}
+          // "+" 버튼에도 disabled 속성을 설정하여 이 버튼이 비활성화 될 수 있도록 합니다.
+          disabled={disabled}
+        >
+          ^2
+        </button>
+        <button
+          data-testid='reset-button'
+          onClick={() => setCount((prev) => 0)}
+          // "+" 버튼에도 disabled 속성을 설정하여 이 버튼이 비활성화 될 수 있도록 합니다.
+          disabled={disabled}
+        >
+          reset
+        </button>
         <div>
           {/* 버튼 요소를 생성합니다. */}
           <button
